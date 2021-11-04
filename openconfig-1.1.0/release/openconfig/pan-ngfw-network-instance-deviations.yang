@@ -1,0 +1,206 @@
+module pan-ngfw-network-instance-deviations {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-network-instance-deviations.yang";
+
+  prefix "pan-ngfw-network-instance-deviations";
+
+  import openconfig-network-instance { prefix "oc-net-inst"; }
+  import openconfig-inet-types { prefix oc-inet; }
+  import openconfig-extensions { prefix oc-ext; }
+  import openconfig-routing-policy { prefix oc-rout-pol; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2020-12-14 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:fdb" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:encapsulation" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:inter-instance-policies" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:route-limits" {
+    deviate not-supported;
+  }
+
+  // TODO FIX
+  // F1216 08:46:54.804842    1690 generator.go:348] ERROR Generating GoStruct Code: could not resolve
+  // leafref path: [network-instances network-instance tables table config protocol] from
+  // &{0xc002fc3200 0xc0005bd740 src-protocol The source protocol for the table connection
+
+  // deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:tables" {
+  //   deviate not-supported;
+  // }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:connection-points" {
+    deviate not-supported;
+  }
+
+  // TODO FIX
+  // F1216 08:43:54.806973    1325 generator.go:348] ERROR Generating GoStruct Code: could not resolve
+  // leafref path: [network-instances network-instance mpls lsps constrained-path tunnels tunnel config name]
+  // from &{0xc0030e0a80 0xc001a8ef00 mpls-lsp A set of MPLS constrained-path LSPs which should be
+  // considered for the policy forwarding next-hop. In order to select between the LSPs within the path-selection-group, the
+  // system should determine which LSP provides the best path to the next-hop for the routed packet
+
+  // deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:mpls" {
+  //   deviate not-supported;
+  // }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:segment-routing" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:vlans" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:afts" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:config/oc-net-inst:type" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:config/oc-net-inst:enabled" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:config/oc-net-inst:description" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:config/oc-net-inst:router-id" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:config/oc-net-inst:route-distinguisher" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:config/oc-net-inst:enabled-address-families" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:config/oc-net-inst:mtu" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:state/oc-net-inst:type" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:state/oc-net-inst:description" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:state/oc-net-inst:router-id" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:state/oc-net-inst:route-distinguisher" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:state/oc-net-inst:enabled-address-families" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:state/oc-net-inst:mtu" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-net-inst:isis" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-net-inst:pim" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-net-inst:bgp/oc-net-inst:neighbors/oc-net-inst:neighbor/oc-net-inst:enable-bfd" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-net-inst:bgp/oc-net-inst:peer-groups/oc-net-inst:peer-group/oc-net-inst:enable-bfd" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-net-inst:igmp" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:interfaces/oc-net-inst:interface/oc-net-inst:config/oc-net-inst:interface" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:interfaces/oc-net-inst:interface/oc-net-inst:config/oc-net-inst:subinterface" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:interfaces/oc-net-inst:interface/oc-net-inst:config/oc-net-inst:associated-address-families" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-net-inst:static-routes/oc-net-inst:static/oc-net-inst:next-hops/oc-net-inst:next-hop/oc-net-inst:enable-bfd" {
+    deviate not-supported;
+  }
+
+  typedef service-port-num-range {
+    type union {
+      type string {
+        pattern '^(6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[0-5][0-9]{4}|[0-9]{1,4})' + 
+          '((\.\.(6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[0-5][0-9]{4}|[0-9]{1,4}))|' +
+          '(,(6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[0-5][0-9]{4}|[0-9]{1,4}))+)$';
+
+      }
+      type oc-inet:port-number;
+      type enumeration {
+        enum ANY {
+          description
+            "Indicates any valid port number (e.g., wildcard)";
+        }
+      }
+    }
+    description
+      "Port numbers may be represented as a single value,
+      an inclusive range as <lower>..<higher>, 
+      an comma seperated port numbers as '80,8080', 
+      or as ANY to indicate a wildcard.";
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:policy-forwarding/oc-net-inst:policies/oc-net-inst:policy/oc-net-inst:rules/oc-net-inst:rule/oc-net-inst:transport/oc-net-inst:config/oc-net-inst:source-port" {
+    deviate replace {
+      type service-port-num-range;
+    }
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:policy-forwarding/oc-net-inst:policies/oc-net-inst:policy/oc-net-inst:rules/oc-net-inst:rule/oc-net-inst:transport/oc-net-inst:config/oc-net-inst:destination-port" {
+    deviate replace {
+      type service-port-num-range;
+    }
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:table-connections/oc-net-inst:table-connection/oc-net-inst:config/oc-net-inst:disable-metric-propagation" {
+    deviate add {
+      config false;
+    }
+  }
+
+    deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:table-connections/oc-net-inst:table-connection/oc-net-inst:config/oc-rout-pol:default-import-policy" {
+    deviate add {
+      config false;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+module pan-ngfw-ospfv2-deviationss {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-ospfv2-deviations.yang";
+
+  prefix "pan-ngfw-ospfv2-deviations";
+
+  import openconfig-ospfv2 { prefix "oc-ospfv2"; }
+  import openconfig-network-instance { prefix "oc-net-inst"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2020-12-14 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:config/oc-ospfv2:summary-route-cost-mode" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:config/oc-ospfv2:igp-shortcuts" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:config/oc-ospfv2:log-adjacency-changes" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:config/oc-ospfv2:hide-transit-only-networks" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:state/oc-ospfv2:summary-route-cost-mode" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:state/oc-ospfv2:igp-shortcuts" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:state/oc-ospfv2:log-adjacency-changes" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:state/oc-ospfv2:hide-transit-only-networks" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:timers/oc-ospfv2:spf/oc-ospfv2:config/oc-ospfv2:maximum-delay" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:timers/oc-ospfv2:spf/oc-ospfv2:state/oc-ospfv2:maximum-delay" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:timers/oc-ospfv2:max-metric" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:timers/oc-ospfv2:lsa-generation/oc-ospfv2:config/oc-ospfv2:maximum-delay" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:timers/oc-ospfv2:lsa-generation/oc-ospfv2:state/oc-ospfv2:maximum-delay" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:global/oc-ospfv2:mpls" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:mpls" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:lsdb/oc-ospfv2:lsa-types/oc-ospfv2:lsa-type/oc-ospfv2:lsas/oc-ospfv2:lsa/oc-ospfv2:router-lsa" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:lsdb/oc-ospfv2:lsa-types/oc-ospfv2:lsa-type/oc-ospfv2:lsas/oc-ospfv2:lsa/oc-ospfv2:network-lsa" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:lsdb/oc-ospfv2:lsa-types/oc-ospfv2:lsa-type/oc-ospfv2:lsas/oc-ospfv2:lsa/oc-ospfv2:summary-lsa" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:lsdb/oc-ospfv2:lsa-types/oc-ospfv2:lsa-type/oc-ospfv2:lsas/oc-ospfv2:lsa/oc-ospfv2:as-external-lsa" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:lsdb/oc-ospfv2:lsa-types/oc-ospfv2:lsa-type/oc-ospfv2:lsas/oc-ospfv2:lsa/oc-ospfv2:nssa-external-lsa" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:lsdb/oc-ospfv2:lsa-types/oc-ospfv2:lsa-type/oc-ospfv2:lsas/oc-ospfv2:lsa/oc-ospfv2:opaque-lsa" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:config/oc-ospfv2:multi-area-adjacency-primary" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:config/oc-ospfv2:hide-network" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:state/oc-ospfv2:multi-area-adjacency-primary" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:state/oc-ospfv2:hide-network" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:mpls" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:lsa-filter" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:neighbors/oc-ospfv2:neighbor/oc-ospfv2:config/oc-ospfv2:metric" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:neighbors/oc-ospfv2:neighbor/oc-ospfv2:state/oc-ospfv2:metric" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:neighbors/oc-ospfv2:neighbor/oc-ospfv2:state/oc-ospfv2:backup-designated-router" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:neighbors/oc-ospfv2:neighbor/oc-ospfv2:state/oc-ospfv2:last-established-time" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:neighbors/oc-ospfv2:neighbor/oc-ospfv2:state/oc-ospfv2:retranmission-queue-length" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:config/oc-ospfv2:authentication-type" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:interfaces/oc-ospfv2:interface/oc-ospfv2:state/oc-ospfv2:authentication-type" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:virtual-links/oc-ospfv2:virtual-link/oc-ospfv2:state/oc-ospfv2:backup-designated-router" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:virtual-links/oc-ospfv2:virtual-link/oc-ospfv2:state/oc-ospfv2:state-changes" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:virtual-links/oc-ospfv2:virtual-link/oc-ospfv2:state/oc-ospfv2:last-established-time" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:virtual-links/oc-ospfv2:virtual-link/oc-ospfv2:state/oc-ospfv2:retranmission-queue-length" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-net-inst:network-instances/oc-net-inst:network-instance/oc-net-inst:protocols/oc-net-inst:protocol/oc-ospfv2:ospfv2/oc-ospfv2:areas/oc-ospfv2:area/oc-ospfv2:virtual-links/oc-ospfv2:virtual-link/oc-ospfv2:state/oc-ospfv2:priority" {
+    deviate not-supported;
+  }
+
+}

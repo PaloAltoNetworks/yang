@@ -1,0 +1,174 @@
+module pan-ngfw-routing-policy-deviations {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-routing-policy-deviations.yang";
+
+  prefix "pan-ngfw-routing-policy-deviations";
+
+  import openconfig-routing-policy { prefix "oc-rpol"; }
+  import openconfig-bgp-policy { prefix "oc-bgp-pol"; }
+  import openconfig-ospf-policy {prefix "oc-ospf-pol"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2021-02-03 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+  // OpenConfig specific extensions for module metadata.
+  oc-ext:regexp-posix;
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:defined-sets/oc-rpol:tag-sets" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:config/oc-rpol:call-policy" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:state/oc-rpol:call-policy" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:config/oc-rpol:install-protocol-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:state/oc-rpol:install-protocol-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:match-neighbor-set/oc-rpol:config/oc-rpol:match-set-options" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:match-neighbor-set/oc-rpol:state/oc-rpol:match-set-options" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:match-prefix-set/oc-rpol:config/oc-rpol:match-set-options" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:match-prefix-set/oc-rpol:state/oc-rpol:match-set-options" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-rpol:match-tag-set" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:config/oc-bgp-pol:afi-safi-in" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:state/oc-bgp-pol:afi-safi-in" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:config/oc-bgp-pol:local-pref-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:state/oc-bgp-pol:local-pref-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:config/oc-bgp-pol:med-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:state/oc-bgp-pol:med-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:config/oc-bgp-pol:next-hop-in" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:state/oc-bgp-pol:next-hop-in" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:config/oc-bgp-pol:origin-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:state/oc-bgp-pol:origin-eq" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:config/oc-bgp-pol:route-type" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:state/oc-bgp-pol:route-type" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:community-count" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:as-path-length" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:conditions/oc-bgp-pol:bgp-conditions/oc-bgp-pol:match-as-path-set" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:actions/oc-bgp-pol:bgp-actions/oc-bgp-pol:set-as-path-prepend" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:defined-sets/oc-bgp-pol:bgp-defined-sets/oc-bgp-pol:as-path-sets" {
+    deviate not-supported;
+  }
+
+  typedef defined-sets-naming-schema {
+    type string {
+      pattern '^([A-Za-z0-9_.-]+\+){2}([A-Za-z0-9_.-]+)$';
+    }
+    description
+      "Naming schema required to map Routing Policy entries to PANOS,
+      using '+' to split the Virtual Router name, the type of object and the object value";
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:defined-sets/oc-rpol:prefix-sets/oc-rpol:prefix-set/oc-rpol:config/oc-rpol:name" {
+    deviate replace {
+      type defined-sets-naming-schema;
+    }
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:defined-sets/oc-rpol:neighbor-sets/oc-rpol:neighbor-set/oc-rpol:config/oc-rpol:name" {
+    deviate replace {
+      type defined-sets-naming-schema;
+    }
+  }
+
+  typedef policy-definition-naming-schema {
+    type string {
+      pattern '^([A-Za-z0-9_.-]+\+){2}([A-Za-z0-9_.-]+)$';
+    }
+    description
+      "Naming schema required to map Routing Policy entries to PANOS,
+      using '+' to split the Virtual Router name and the Routing Protocol";
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:config/oc-rpol:name" {
+    deviate replace {
+      type policy-definition-naming-schema;
+    }
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:actions/oc-rpol:bgp-actions/oc-rpol:set-community/oc-rpol:reference" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-rpol:routing-policy/oc-rpol:policy-definitions/oc-rpol:policy-definition/oc-rpol:statements/oc-rpol:statement/oc-rpol:actions/oc-rpol:bgp-actions/oc-rpol:set-ext-community/oc-rpol:reference" {
+    deviate not-supported;
+  }
+
+}

@@ -1,0 +1,69 @@
+module pan-fw-zones-deviations {
+  namespace "http://github.com/PaloAlto-Networks/yang/openconfig/fw-zones/deviations";
+
+  prefix "pan-ngfw-zones-deviations";
+
+  import openconfig-fw-zones { prefix "oc-fw-zones"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2021-03-30 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+  deviation "/oc-fw-zones:zones/oc-fw-zones:zone/oc-fw-zones:config/oc-fw-zones:description" {
+    deviate not-supported;
+  }
+
+  identity ZONETYPE {
+    description "FW zone type";
+  }
+  
+  identity layer2 {
+    base ZONETYPE;
+    description "Layer 2 zone type";
+  }
+
+  identity layer3 {
+    base ZONETYPE;
+    description "Layer 3 zone type";
+  }
+
+  identity virtual-wire {
+    base ZONETYPE;
+    description "Virtual-wire zone type";
+  }
+
+  identity tap {
+    base ZONETYPE;
+    description "Tap zone type";
+  }
+
+  identity external {
+    base ZONETYPE;
+    description "External zone type";
+  }
+  
+  augment "/oc-fw-zones:zones/oc-fw-zones:zone/oc-fw-zones:config" {
+    leaf fw-zone-type {
+    type identityref {
+	  base pan-ngfw-zones-deviations:ZONETYPE;
+    }
+    description
+      "PAN-OS zone type";
+    }
+  }
+
+  augment "/oc-fw-zones:zones/oc-fw-zones:zone/oc-fw-zones:state" {
+    leaf fw-zone-type {
+    type identityref {
+	  base pan-ngfw-zones-deviations:ZONETYPE;
+    }
+    description
+      "PAN-OS zone type";
+    }
+  }
+}

@@ -1,0 +1,22 @@
+module pan-ngfw-bgp-deviations {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-bgp-deviations.yang";
+
+  prefix "pan-ngfw-bgp-deviations";
+
+  import openconfig-bgp { prefix "oc-bgp"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2021-03-17 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+
+  deviation "/oc-bgp:bgp/oc-bgp:neighbors/oc-bgp:neighbor/oc-bgp:config/oc-bgp:local-as" {
+    deviate not-supported;
+  }
+
+}

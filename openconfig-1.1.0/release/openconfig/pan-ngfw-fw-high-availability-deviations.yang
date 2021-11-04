@@ -1,0 +1,99 @@
+module pan-ngfw-fw-high-availability-deviations {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-fw-high-availability-deviations.yang";
+
+  prefix "pan-ngfw-fw-high-availability-deviations";
+
+  import openconfig-fw-high-availability { prefix "oc-fw-ha"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2020-12-10 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:config/oc-fw-ha:ha-key" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:state/oc-fw-ha:ha-key" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:config/oc-fw-ha:ha-key-hashed" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:state/oc-fw-ha:ha-key-hashed" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:control-link/oc-fw-ha:config/oc-fw-ha:control-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:control-link/oc-fw-ha:state/oc-fw-ha:control-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:control-link/oc-fw-ha:backup/oc-fw-ha:config/oc-fw-ha:control-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:control-link/oc-fw-ha:backup/oc-fw-ha:state/oc-fw-ha:control-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:config/oc-fw-ha:data-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:state/oc-fw-ha:data-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:backup/oc-fw-ha:config/oc-fw-ha:data-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:backup/oc-fw-ha:state/oc-fw-ha:data-link-port" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:config/oc-fw-ha:data-link-peer-ipv4" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:config/oc-fw-ha:data-link-peer-ipv6" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:backup/oc-fw-ha:config/oc-fw-ha:data-link-peer-ipv4" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:data-link/oc-fw-ha:backup/oc-fw-ha:config/oc-fw-ha:data-link-peer-ipv6" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:state/oc-fw-ha:ha-mismatched-parameters" {
+    deviate not-supported;
+  }
+
+  augment "/oc-fw-ha:ha-groups/oc-fw-ha:ha-group/oc-fw-ha:config" {
+    leaf ha-session-sync {
+      type boolean;
+      description
+        "'TRUE' if session sync is operational between HA peers. 'FALSE' otherwise.";
+    }
+
+    leaf ha-config-sync {
+      type boolean;
+      description
+        "'TRUE' if config sync is operational between HA peers. 'FALSE' otherwise.";
+    }
+  }
+
+}

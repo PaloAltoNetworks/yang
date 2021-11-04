@@ -1,0 +1,78 @@
+module pan-ngfw-lacp-deviations.yang {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-lacp-deviations.yang";
+
+  prefix "pan-ngfw-lacp-deviations.yang";
+
+  import openconfig-lacp { prefix "oc-lacp"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2020-12-10 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:config/oc-lacp:system-priority" {
+    deviate not-supported;
+  }
+
+
+  deviation "/oc-lacp:lacp/oc-lacp:state/oc-lacp:system-priority" {
+    description
+      "system-priority has a default value";
+    deviate add {
+      default 32768;
+    }
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:config/oc-lacp:system-id-mac" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:activity" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:timeout" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:synchronization" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:collecting" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:distributing" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:port-num" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:partner-port-num" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:counters/oc-lacp:lacp-rx-errors" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:counters/oc-lacp:lacp-tx-errors" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:counters/oc-lacp:lacp-unknown-errors" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-lacp:lacp/oc-lacp:interfaces/oc-lacp:interface/oc-lacp:members/oc-lacp:member/oc-lacp:state/oc-lacp:counters/oc-lacp:lacp-errors" {
+    deviate not-supported;
+  }
+
+}

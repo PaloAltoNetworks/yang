@@ -1,0 +1,48 @@
+module pan-ngfw-relay-agent-deviations {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-relay-agent-deviations.yang";
+
+  prefix "pan-ngfw-relay-agent-deviations";
+
+  import openconfig-relay-agent { prefix "oc-relay"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2020-12-10 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcp/oc-relay:config/oc-relay:enable-relay-agent" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcpv6/oc-relay:config/oc-relay:enable-relay-agent" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcp/oc-relay:agent-information-option" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcp/oc-relay:interfaces/oc-relay:interface/oc-relay:agent-information-option" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcp/oc-relay:interfaces/oc-relay:interface/oc-relay:state/oc-relay:counters" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcpv6/oc-relay:options" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcpv6/oc-relay:interfaces/oc-relay:interface/oc-relay:options" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-relay:relay-agent/oc-relay:dhcpv6/oc-relay:interfaces/oc-relay:interface/oc-relay:state/oc-relay:counters" {
+    deviate not-supported;
+  }
+}

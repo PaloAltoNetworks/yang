@@ -1,0 +1,74 @@
+module pan-ngfw-bfd-deviations {
+  namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan-ngfw-bfd-deviations.yang";
+
+  prefix "pan-ngfw-bfd-deviations";
+
+  import openconfig-bfd { prefix "oc-bfd"; }
+
+  organization
+    "Palo Alto Networks";
+
+  revision 2020-12-10 {
+    description
+      "Initial deviations file.";
+    reference "0.0.1";
+  }
+
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:micro-bfd-sessions" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:config/oc-bfd:local-address" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:state/oc-bfd:local-address" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:config/oc-bfd:enable-per-member-link" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:state/oc-bfd:enable-per-member-link" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:interface-ref/oc-bfd:config" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:echo" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:remote-control-plane-independent" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:remote-authentication-enabled" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:demand-mode-requested" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:remote-minimum-receive-interval" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:failure-transitions" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:last-failure-time" {
+    deviate not-supported;
+  }
+
+  deviation "/oc-bfd:bfd/oc-bfd:interfaces/oc-bfd:interface/oc-bfd:peers/oc-bfd:peer/oc-bfd:state/oc-bfd:async/oc-bfd:up-transitions" {
+    deviate not-supported;
+  }
+
+}
