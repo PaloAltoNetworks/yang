@@ -1,0 +1,29 @@
+module pan-ngfw-st-base {
+
+    yang-version "1";
+
+    namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan/pan-ngfw-st-base.yang";
+
+    prefix "pan-ngfw-st-base";
+
+    // Imports
+    //      Add imports here
+
+    organization "Palo Alto Networks";
+
+    description
+    "PanOS Streaming-Telemetry feature base model";
+
+    revision 2023-02-14 {
+        description "Initial version";
+    }
+
+    grouping logging-top-base {
+        description "Top level grouping for Streaming Telemetry";
+
+        container pan {
+            description "Top level container for Streaming Telemetry";
+            }
+    }
+    uses logging-top-base;
+}
