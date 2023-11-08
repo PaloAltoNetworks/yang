@@ -1,0 +1,214 @@
+module pan-ngfw-pcap {
+
+    yang-version "1";
+
+    namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/pan/pan-ngfw-pcap.yang";
+
+    prefix "pan-ngfw-pcap";
+
+    import pan-ngfw-st-base {
+        prefix pan-ngfw-st-base;
+    }
+
+    // /pan/pcap/config[filter1_source=0.0.0.0][filter1_source_port=22][filter1_destination_port=22][file_size=100][duration=120][data_push_url=https://xxx.com/upload]
+
+    import openconfig-inet-types { prefix oc-inet; }
+
+    organization "Palo Alto Networks";
+
+    description
+        "PAN Streaming-Telemetry PCAP";
+
+    revision 2022-10-04 {
+        description "Initial version";
+    }
+
+    grouping param-type {
+        // filter
+        leaf source {
+            type oc-inet:ip-address;
+            description
+                "Source IP address";
+        }
+        leaf source_port {
+            type int32;
+            description
+                "<1-65535> Source port";
+        }
+        leaf destination {
+            type oc-inet:ip-address;
+            description
+                "Destination IP address";
+        }
+        leaf destination_port {
+            type int32;
+            description
+                "<1-65535> Destination port";
+        }
+        leaf protocol {
+            type int32;
+            description
+                "<1-255> network protocol value";
+        }
+
+        //termination criteria
+        leaf file_size {
+            type int32;
+            description
+                "PCAP byte count, unit is MB";
+        }
+        leaf packet_captured_count {
+            type int32;
+            units bytes;
+            description
+                "PCAP packet count";
+        }
+        leaf duration {
+            type int32;
+            default 120;
+            units seconds;
+            description
+                "PCAP duration time, unit is second";
+        }
+        leaf data_push_url {
+            type string;
+            description
+                "Url to update pcap file to";
+        }
+    }
+
+    augment "/pan-ngfw-st-base:pan" {
+        container pcap {
+            description "Top level container for Streaming Telemetry PCAP";
+
+            container config {
+                description "Streaming Telemetry PCAP config";
+
+                leaf filter1_source {
+                    type leafref {
+                        path "../param/source";
+                    }
+                }
+                leaf filter1_source_port {
+                    type leafref {
+                        path "../param/source_port";
+                    }
+                }
+                leaf filter1_destination {
+                    type leafref {
+                        path "../param/destination";
+                    }
+                }
+                leaf filter1_destination_port {
+                    type leafref {
+                        path "../param/destination_port";
+                    }
+                }
+                leaf filter1_protocol {
+                    type leafref {
+                        path "../param/protocol";
+                    }
+                }
+                leaf filter2_source {
+                    type leafref {
+                        path "../param/source";
+                    }
+                }
+                leaf filter2_source_port {
+                    type leafref {
+                        path "../param/source_port";
+                    }
+                }
+                leaf filter2_destination {
+                    type leafref {
+                        path "../param/destination";
+                    }
+                }
+                leaf filter2_destination_port {
+                    type leafref {
+                        path "../param/destination_port";
+                    }
+                }
+                leaf filter2_protocol {
+                    type leafref {
+                        path "../param/protocol";
+                    }
+                }
+                leaf filter3_source {
+                    type leafref {
+                        path "../param/source";
+                    }
+                }
+                leaf filter3_source_port {
+                    type leafref {
+                        path "../param/source_port";
+                    }
+                }
+                leaf filter3_destination {
+                    type leafref {
+                        path "../param/destination";
+                    }
+                }
+                leaf filter3_destination_port {
+                    type leafref {
+                        path "../param/destination_port";
+                    }
+                }
+                leaf filter3_protocol {
+                    type leafref {
+                        path "../param/protocol";
+                    }
+                }
+                leaf filter4_source {
+                    type leafref {
+                        path "../param/source";
+                    }
+                }
+                leaf filter4_source_port {
+                    type leafref {
+                        path "../param/source_port";
+                    }
+                }
+                leaf filter4_destination {
+                    type leafref {
+                        path "../param/destination";
+                    }
+                }
+                leaf filter4_destination_port {
+                    type leafref {
+                        path "../param/destination_port";
+                    }
+                }
+                leaf filter4_protocol {
+                    type leafref {
+                        path "../param/protocol";
+                    }
+                }
+                leaf file_size {
+                    type leafref {
+                        path "../param/file_size";
+                    }
+                }
+                leaf packet_captured_count {
+                    type leafref {
+                        path "../param/packet_captured_count";
+                    }
+                }
+                leaf duration {
+                    type leafref {
+                        path "../param/duration";
+                    }
+                }
+                leaf data_push_url {
+                    type leafref {
+                        path "../param/data_push_url";
+                    }
+                }
+
+                container param {
+                    uses param-type;
+                }
+            }
+        }
+    }
+}

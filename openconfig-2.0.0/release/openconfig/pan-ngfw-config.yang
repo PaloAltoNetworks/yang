@@ -1,0 +1,68 @@
+module pan-ngfw-logging {
+
+    yang-version "1";
+
+    namespace "http://github.com/PaloAltoNetworks/yang/openconfig-1.0.0/release/openconfig/pan/pan-ngfw-logging.yang";
+
+    prefix "pan-ngfw-st-config";
+
+    import pan-ngfw-st-base {
+        prefix pan-ngfw-st-base;
+    }
+    
+    //pan/config/full_config ---> For dial out use default endpoint configured in content, else reply config as json if size is < 4MB, if size is >=4MB and there is no REST end-point NOP, reply error
+    //pan/config/full_config[data_push_url=...] ---> Override any configued REST endpoint and send data to this if size is >= 4 MB else reply config as json
+    //pan/config/delta_config -->  For dial out use default endpoint configured in content, else reply config as json if size is < 4MB, if size is >=4MB and there is no REST end-point NOP, reply error.
+    //pan/config/delta_config[data_push_url=...]  ---> Override any configued REST endpoint and send data to this if size is >= 4 MB else reply config as json
+    // With all the commands optional data_push_url can be passed to upload the results to the URL provided here. e.g. "pan/config/delta_config[data_push_url=<URL>]"
+
+    //dial_in with data_push URL, if there is a file/output for the comamnd, it is always uploaded, no size check is performed
+
+    oc-ext:openconfig-version "1.0.0";
+    organization "Palo Alto Networks";
+
+    description
+        "Streaming-Telemetry Config";
+
+    revision 2022-07-12 {
+        description "Initial version";
+        reference "1.0.0";
+    }
+
+    grouping config-type {
+        leaf data_push_url_str {
+            type string;
+        }
+    }
+
+    augment "/pan-ngfw-st-base:pan" {
+
+        container config {
+            description "Top level container for Streaming Telemetry Config";
+
+            list full_config {
+                key "data_push_url";
+                leaf data_push_url {
+                    type leafref {
+                        path "../configs/data_push_url_str";
+                    }
+                }
+                container configs {
+                    uses config-type;
+                }
+            } // list full_config
+
+            list delta_config {
+                key "data_push_url";
+                leaf data_push_url {
+                    type leafref {
+                        path "../configs/data_push_url_str";
+                    }
+                }
+                container configs {
+                    uses config-type;
+                }
+            } // list delta_config
+        }
+    }
+}
